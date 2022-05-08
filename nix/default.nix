@@ -81,11 +81,11 @@ flake-utils.lib.eachSystem [
       cargoLock = {
         lockFile = src + "/Cargo.lock";
         outputHashes = {
-            "cosmic-theme-0.1.0" = pkgs.lib.fakeSha256;
-            "kmeans_colors-0.5.0" = pkgs.lib.fakeSha256;
-            "libcosmic-0.1.0" = pkgs.lib.fakeSha256;
-            "pop-launcher-1.2.1" = pkgs.lib.fakeSha256;
-            "relm4-macros-0.4.4" = pkgs.lib.fakeSha256;
+          "cosmic-theme-0.1.0" = pkgs.lib.fakeSha256;
+          "kmeans_colors-0.5.0" = pkgs.lib.fakeSha256;
+          "libcosmic-0.1.0" = pkgs.lib.fakeSha256;
+          "pop-launcher-1.2.1" = pkgs.lib.fakeSha256;
+          "relm4-macros-0.4.4" = pkgs.lib.fakeSha256;
         };
       };
     };
