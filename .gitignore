@@ -1,0 +1,12 @@
+target/
+*.new
+.vscode
+.vim
+.DS_Store
+
+# nix
+.direnv/
+result
+result-*
+
+cosmic-launcher/
