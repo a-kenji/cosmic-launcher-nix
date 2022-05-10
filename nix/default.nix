@@ -57,6 +57,7 @@ flake-utils.lib.eachSystem [
 
     nativeBuildInputs = [
       pkgs.pkg-config
+      pkgs.wrapGAppsHook4
     ];
 
     devInputs = [
@@ -81,11 +82,11 @@ flake-utils.lib.eachSystem [
       cargoLock = {
         lockFile = src + "/Cargo.lock";
         outputHashes = {
-          "cosmic-theme-0.1.0" = pkgs.lib.fakeSha256;
-          "kmeans_colors-0.5.0" = pkgs.lib.fakeSha256;
-          "libcosmic-0.1.0" = pkgs.lib.fakeSha256;
-          "pop-launcher-1.2.1" = pkgs.lib.fakeSha256;
-          "relm4-macros-0.4.4" = pkgs.lib.fakeSha256;
+          "cosmic-theme-0.1.0" = "sha256-KKnfNYr6SZuA02ov38zmtk4dRI9O4S0maun4Fs3OOb0=";
+          "kmeans_colors-0.5.0" = "sha256-uzn5LMGOSNO+q0BvNKfcYPHSTpe7ipGaRdefdyOXRJs=";
+          "libcosmic-0.1.0" = "sha256-gtay732XDl3WNUZ5l+H36j9TSi2jJQabA5SVgxhfvqk=";
+          "pop-launcher-1.2.1" = "sha256-7fls1m6ylHIQ9Q38XbNrCm437t4fvRLAAb5keDppey4=";
+          "relm4-macros-0.4.4" = "sha256-P0nOmuTsyqpQM9wplzElYEPovsQ4yZhXS8yhRYttHUU=";
         };
       };
     };
