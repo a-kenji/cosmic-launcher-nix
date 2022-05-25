@@ -44,7 +44,6 @@ flake-utils.lib.eachSystem [
 
     buildInputs = [
       pkgs.xorg.libX11
-      pkgs.glib
       pkgs.cairo
       pkgs.pango
       pkgs.gdk-pixbuf
@@ -53,6 +52,7 @@ flake-utils.lib.eachSystem [
 
     nativeBuildInputs = [
       pkgs.pkg-config
+      pkgs.glib
     ];
 
     devInputs = [
