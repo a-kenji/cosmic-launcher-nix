@@ -49,15 +49,10 @@ flake-utils.lib.eachSystem [
       pkgs.pango
       pkgs.gdk-pixbuf
       pkgs.gtk4
-
-      #pkgs.wrapGAppsHook
-      # pkgs.wrapGAppsHook4
     ];
 
     nativeBuildInputs = [
       pkgs.pkg-config
-      pkgs.glib
-      # pkgs.wrapGAppsHook4
     ];
 
     devInputs = [
