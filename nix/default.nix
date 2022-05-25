@@ -53,11 +53,13 @@ flake-utils.lib.eachSystem [
       pkgs.gtk4
 
       #pkgs.wrapGAppsHook
+      # pkgs.wrapGAppsHook4
     ];
 
     nativeBuildInputs = [
       pkgs.pkg-config
-      pkgs.wrapGAppsHook4
+      pkgs.glib
+      # pkgs.wrapGAppsHook4
     ];
 
     devInputs = [
@@ -79,6 +81,10 @@ flake-utils.lib.eachSystem [
         nativeBuildInputs
         ;
       LIBCLANG_PATH = pkgs.lib.makeLibraryPath [pkgs.llvmPackages_latest.libclang.lib];
+      preCheck = ''
+        export HOME=$TMPDIR
+      '';
+
       cargoLock = {
         lockFile = src + "/Cargo.lock";
         outputHashes = {
@@ -92,8 +98,7 @@ flake-utils.lib.eachSystem [
     };
 
     # nix run
-    apps.launcher = flake-utils.lib.mkApp {drv = packages.launcher;};
-    defaultApp = apps.launcher;
+    apps.default = flake-utils.lib.mkApp {drv = packages.default;};
 
     devShells = {
       default = pkgs.callPackage ./devShell.nix {
@@ -105,6 +110,7 @@ flake-utils.lib.eachSystem [
         nativeBuildInputs = fmtInputs;
       };
     };
+    formatter = pkgs.alejandra;
   }
 )
 // rec {
