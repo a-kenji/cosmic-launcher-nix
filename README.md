@@ -14,15 +14,15 @@ direnv allow
 ## Build & Install
 Build:
 ```
-nix build
+nix build github:a-kenji/cosmic-launcher-nix
 ```
 Run:
 ```
-nix run
+nix run github:a-kenji/cosmic-launcher-nix
 ```
 Install:
 ```
-nix profile install
+nix profile install github:a-kenji/cosmic-launcher-nix
 ```
 
 ## Format
